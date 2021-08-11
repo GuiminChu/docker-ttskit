@@ -11,8 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: privapps/docker-ttskit@main
+      - name: TTSKIT
+        uses: privapps/docker-ttskit@0.1.0
+      # - uses: privapps/docker-ttskit@main
         with:
-          text: '1'
-          content: './out.wav'
+          text: '请通行'
+          content: './pass.wav'
       - run: ls -l
